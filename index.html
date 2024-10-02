@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บันทึกรายรับรายจ่าย</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ระบบบันทึกรายรับรายจ่าย</h1>
+        <form id="transaction-form">
+            <div>
+                <label for="type">ประเภท:</label>
+                <select id="type">
+                    <option value="รายรับ">รายรับ</option>
+                    <option value="รายจ่าย">รายจ่าย</option>
+                </select>
+            </div>
+            <div>
+                <label for="category">หมวดหมู่:</label>
+                <input type="text" id="category" required>
+            </div>
+            <div>
+                <label for="amount">จำนวนเงิน:</label>
+                <input type="number" id="amount" required>
+            </div>
+            <button type="submit">บันทึก</button>
+        </form>
+
+        <h2>รายการทั้งหมด</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ประเภท</th>
+                    <th>หมวดหมู่</th>
+                    <th>จำนวนเงิน</th>
+                    <th>ลบ</th>
+                </tr>
+            </thead>
+            <tbody id="transaction-list"></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
