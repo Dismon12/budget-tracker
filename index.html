@@ -19,7 +19,15 @@
             </div>
             <div>
                 <label for="category">หมวดหมู่:</label>
-                <input type="text" id="category" required>
+                <select id="category">
+                    <option value="ข้าวเช้า">ข้าวเช้า</option>
+                    <option value="ข้าวเที่ยง">ข้าวเที่ยง</option>
+                    <option value="ข้าวเย็น">ข้าวเย็น</option>
+                    <option value="เงินพ่อ">เงินพ่อ</option>
+                    <option value="เงินแม่">เงินแม่</option>
+                    <option value="ค่าขนม">ค่าขนม</option>
+                    <option value="ค่าเน็ต">ค่าเน็ต</option>
+                </select>
             </div>
             <div>
                 <label for="amount">จำนวนเงิน:</label>
@@ -32,6 +40,7 @@
         <table>
             <thead>
                 <tr>
+                    <th>เลือก</th>
                     <th>ประเภท</th>
                     <th>หมวดหมู่</th>
                     <th>จำนวนเงิน</th>
@@ -40,6 +49,13 @@
             </thead>
             <tbody id="transaction-list"></tbody>
         </table>
+
+        <h3>การคำนวณ</h3>
+        <button id="sum-btn">บวก</button>
+        <button id="subtract-btn">ลบ</button>
+        <button id="multiply-btn">คูณ</button>
+        <button id="divide-btn">หาร</button>
+        <p id="result"></p>
     </div>
 
     <script src="script.js"></script>
